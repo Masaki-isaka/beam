@@ -1,0 +1,7 @@
+Apache Beam is a unified programming model for batch and streaming data processing.
+Beam pipelines can run on multiple execution engines such as Apache Flink Apache Spark and Google Cloud Dataflow.
+The Beam SDK supports Python Java and Go programming languages.
+With Beam you can write your data processing logic once and run it anywhere.
+Apache Beam provides transforms for reading writing filtering grouping and aggregating data.
+Beam is an open source project under the Apache Software Foundation.
+Data engineers use Beam to build scalable data pipelines for big data processing.
