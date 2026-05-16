@@ -41,6 +41,13 @@
       <version>${slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
+
+    <!-- Kafka Client -->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-clients</artifactId>
+      <version>3.7.0</version>
+    </dependency>
   </dependencies>
 
   <build>
