@@ -15,15 +15,15 @@ import java.util.Properties;
  * KafkaProducerSample を先に実行してメッセージを送信しておくこと。
  *
  * 実行方法:
- *   mvn compile exec:java -Dexec.mainClass=kafka.KafkaConsumerSample
+ * mvn compile exec:java -Dexec.mainClass=kafka.KafkaConsumerSample
  *
  * Ctrl+C で停止。
  */
 public class KafkaConsumerSample {
 
     private static final String BOOTSTRAP_SERVERS = "localhost:9092";
-    private static final String TOPIC             = "sample-topic";
-    private static final String GROUP_ID          = "sample-group";
+    private static final String TOPIC = "beam-output";
+    private static final String GROUP_ID = "sample-group";
 
     public static void main(String[] args) {
 
@@ -31,7 +31,7 @@ public class KafkaConsumerSample {
         props.put("bootstrap.servers", BOOTSTRAP_SERVERS);
         // コンシューマーグループID: 同じIDのコンシューマーで負荷分散される
         props.put("group.id", GROUP_ID);
-        props.put("key.deserializer",   "org.apache.kafka.common.serialization.StringDeserializer");
+        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         // グループ内に既存のオフセットがない場合、最も古いメッセージから読む
         props.put("auto.offset.reset", "earliest");
